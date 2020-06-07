@@ -10,6 +10,7 @@ mkdir ~/opt && tar xzf ~/cmake-3.16.0-Linux-x86_64.tar.gz -C ~/opt
 rm ~/cmake-3.16.0-Linux-x86_64.tar.gz
 export PATH="${HOME}/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
 
+cd ~
 git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
 cd openpose
 sudo bash ./scripts/ubuntu/install_deps.sh
