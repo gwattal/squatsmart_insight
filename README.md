@@ -26,11 +26,14 @@ libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-
 
 replace cmake as old version has CUDA variable bugs
 ```
-wget https://github.com/Kitware/CMake/releases/download/v3.16.0/cmake-3.16.0-Linux-x86_64.tar.gz
-mkdir ~/opt && tar xzf cmake-3.16.0-Linux-x86_64.tar.gz -C ~/opt
+# Install a newer version of cmake in the ~/opt directory
+cd ~ && wget https://github.com/Kitware/CMake/releases/download/v3.16.0/cmake-3.16.0-Linux-x86_64.tar.gz
+mkdir ~/opt && tar xzf ~/cmake-3.16.0-Linux-x86_64.tar.gz -C ~/opt
+rm ~/cmake-3.16.0-Linux-x86_64.tar.gz
+export PATH="${HOME}/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
 ```
 
-add this to your `$PATH`
+add this to your `~/.bashrc`
 ```
 export PATH="~/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
 ```
