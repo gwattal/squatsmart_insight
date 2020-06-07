@@ -10,15 +10,13 @@ mkdir ~/opt && tar xzf ~/cmake-3.16.0-Linux-x86_64.tar.gz -C ~/opt
 rm ~/cmake-3.16.0-Linux-x86_64.tar.gz
 export PATH="${HOME}/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
 
-cd ~
-git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
-cd openpose
-sudo bash ./scripts/ubuntu/install_deps.sh
+cd ~ && git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
+sudo bash ~/openpose/scripts/ubuntu/install_deps.sh
 
-mkdir -p build
-cmake -DBUILD_PYTHON=ON .. 
+cd ~/openpose && mkdir -p build
+cd ~/openpose/build && cmake -DBUILD_PYTHON=ON .. 
 # Running this a second time is needed since the models might not be downloaded
-cmake -DBUILD_PYTHON=ON .. 
-make -j `nproc`
+cd ~/openpose/build && cmake -DBUILD_PYTHON=ON .. 
+cd ~/openpose/build && make -j `nproc`
 
-echo "Make sure models are downloaded"
+echo "MAKE SURE MODELS ARE DOWNLODADED"
