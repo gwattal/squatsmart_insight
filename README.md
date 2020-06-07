@@ -16,46 +16,15 @@ Built on Sat_Aug_25_21:08:01_CDT_2018
 Cuda compilation tools, release 10.0, V10.0.130
 ```
 
-Update packages:
+Update packages and install openpose:
+
 ```
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends \
-python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
-libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
+./install_deps.sh
 ```
 
-replace cmake as old version has CUDA variable bugs
+Put this in `~/.bashrc`
+
 ```
-# Install a newer version of cmake in the ~/opt directory
-cd ~ && wget https://github.com/Kitware/CMake/releases/download/v3.16.0/cmake-3.16.0-Linux-x86_64.tar.gz
-mkdir ~/opt && tar xzf ~/cmake-3.16.0-Linux-x86_64.tar.gz -C ~/opt
-rm ~/cmake-3.16.0-Linux-x86_64.tar.gz
 export PATH="${HOME}/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
+export PYTHONPATH="${HOME}/openpose/build/python/openpose:${PYTHONPATH}"
 ```
-
-add this to your `~/.bashrc`
-```
-export PATH="~/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
-```
-
-and restart your bash shell.
-
-
-Clone `openpose`:
-
-```
-git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
-```
-
-and install pre-requisities:
-```
-cd openpose
-sudo bash ./scripts/ubuntu/install_deps.sh
-```
-
-then install using
-```
-mkdir -p build
-cmake -DBUILD_PYTHON=ON .. 
-make -j `nproc`
-``

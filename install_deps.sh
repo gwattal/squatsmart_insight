@@ -20,5 +20,5 @@ cd ~/openpose/build && cmake -DBUILD_PYTHON=ON ..
 cd ~/openpose/build && make -j `nproc`
 
 echo "MAKE SURE MODELS ARE DOWNLODADED in ${HOME}/openpose/models/"
-echo "Add ${HOME}/openpose/build/python/openpose to PATH in ~/.bashrc"
+echo "Add ${HOME}/opt/cmake-3.16.0-Linux-x86_64/bin to PATH in ~/.bashrc"
 echo "Add ${HOME}/openpose/build/python/openpose to PYTHONPATH in ~/.bashrc"
