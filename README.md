@@ -32,7 +32,7 @@ mkdir ~/opt && tar xzf cmake-3.16.0-Linux-x86_64.tar.gz -C ~/opt
 
 add this to your `$PATH`
 ```
-export PATH="/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
+export PATH="~/opt/cmake-3.16.0-Linux-x86_64/bin:${PATH}"
 ```
 
 and restart your bash shell.
@@ -41,7 +41,7 @@ and restart your bash shell.
 Clone `openpose`:
 
 ```
-https://github.com/CMU-Perceptual-Computing-Lab/openpose
+git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
 ```
 
 and install pre-requisities:
