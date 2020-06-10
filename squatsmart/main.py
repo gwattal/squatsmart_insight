@@ -24,7 +24,7 @@ def upload_form():
 
 def get_keypoints(filename):
     params = dict()
-    params["model_folder"] = "/Users/gwattal/squatsmart/openpose/models"
+    params["model_folder"] = "/home/ubuntu/openpose/models"
     # Starting OpenPose
     opWrapper = op.WrapperPython()
     opWrapper.configure(params)
