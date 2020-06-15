@@ -11,7 +11,7 @@ import pyopenpose as op
 
 # Custom Params for OpenPose(refer to include/openpose/flags.hpp for more parameters)
 params = dict()
-params["model_folder"] = "/Users/gwattal/squatsmart/openpose/models"
+params["model_folder"] = "/home/ubuntu/openpose/models"
 
 # Starting OpenPose
 opWrapper = op.WrapperPython()
@@ -20,8 +20,8 @@ opWrapper.start()
 start = time.time()
 def get_pose_keypoints(input_image_path):
 
-    output_image_path="/Users/gwattal/squatsmart/openpose/output_images2/"
-    output_keypoints_path="/Users/gwattal/squatsmart/openpose/output_keypoints2/" 
+    output_image_path="/home/ubuntu/side_output_images/"
+    output_keypoints_path="/home/ubuntu/side_output_keypoints/" 
     files = os.listdir(input_image_path)
     imagePaths = [os.path.join(input_image_path, f) for f in files if '.jpg' in f]
     #

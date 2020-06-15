@@ -6,14 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-numpy = "*"
-flask = "*"
-opencv-python = "*"
 scikit-learn = "*"
-jupyterlab = "*"
 matplotlib = "*"
-pandas = "*"
-gunicorn = "*"
 
 [requires]
 python_version = "3.6"

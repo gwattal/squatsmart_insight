@@ -1,10 +1,43 @@
 <!doctype html>
-<html>
-   <body>
+<html lang="en">
+<head>
+<title>SquatSmart</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;
+		max-width: 650px;
+  		margin: auto;}
+</style>
+</head>
+<body>
+   <div class="header">
+   <h1>Welcome to SquatSmart</h1>
+   <p>Your Virtual Squat Spotter</p>
+</div>
+
+<div class="content">
        <h1> {{ prediction }}</h1>
        <h2>User Input Image and annotated keypoints</h2>
 	   <!-- <img src="{{ url_for('static', filename = my_img_name) }}" width="500" height="333"> -->
-	   <img src="{{ user_image }}" alt="User Image" width="250" height="333">
-	   <img src="{{ user_image2 }}" alt="User Image2" width="250" height="333">
+	   <img src="{{ user_image }}" alt="User Image" width="300">
+	   <img src="{{ user_image2 }}" alt="User Image2" width="300">
+	</div>
    </body>
 </html>
