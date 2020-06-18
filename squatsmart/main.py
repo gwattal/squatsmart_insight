@@ -23,7 +23,7 @@ def upload_form():
     return render_template('upload.html', user_image = full_filename)
 
 def side_view(x_test):
-    loaded_model = pickle.load(open("side_random_forest_model.sav", 'rb'))
+    loaded_model = pickle.load(open("models/side_random_forest_model.sav", 'rb'))
     result = loaded_model.predict(x_test.reshape(1,-1))
     if(result[0]=='normal'):
         feedback= "You are hitting the right squat depth. Good job!"
@@ -36,7 +36,7 @@ def front_view(x_test):
     x_new_test[ :-1] = x_test
     x_new_test[-1]=(x_test[14]-x_test[11])/(x_test[5]-x_test[2])
     x_new_test[np.isinf(x_new_test)]=0.0
-    loaded_model = pickle.load(open("ovr_logistic_regression_model.sav", 'rb'))
+    loaded_model = pickle.load(open("models/ovr_logistic_regression_model.sav", 'rb'))
     result = loaded_model.predict(x_new_test.reshape(1,-1))
     feedback= "Your squat foot stance is " + result[0]
     return feedback
@@ -84,7 +84,7 @@ def upload_file():
             
             ### load the ovr logistic classifier now
             # load the model from disk
-            loaded_model = pickle.load(open("front_or_side_model.sav", 'rb'))
+            loaded_model = pickle.load(open("models/front_or_side_model.sav", 'rb'))
             result = loaded_model.predict(x_test.reshape(1,-1))
             if(result[0]=='front'):
                 feedback=front_view(x_test)
