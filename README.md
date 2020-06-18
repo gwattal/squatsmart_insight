@@ -1,4 +1,20 @@
-# squatsmart - insight
+# SquatSmart - insight
+Welcome to SquatSmart - Your virtual squat spotter. 
+
+## What is SquatSmart?
+People are getting more aware about fitness and are investing more time and money on it. Weight training is an essential part of fitness as it builds strength and bone density. Strength training is useful in countering the affects of ageing and is important especially for women and the elderly. Barbell squats are an important weight training exercise as it builds strength in the lower body, the core and arms.  
+
+To get the most out of a squat workout and to avoid injuries, the squat needs to be done with proper form. It can be hard to judge your own form while performing a demanding exercise like barbell squats, especially when one is a beginner. Many people take the help of a personal trainer or spotter to get feedback on their squat form, however this can be a little expensive. Moreover in the times of the Covid pandemic people might not have access to personal trainers or spotters.
+
+Here is where SquatSmart comes in! With SquatSmart a user can simply upload a picture of them performing the squat and get feedback on their squat form.
+
+## Using SquatSmart
+
+The user can upload the picture of them performing the squat either front facing or side facing. It can be taken from a phone camera. The camera should be in the centre with respect to the person and the camera angle should be aligned so that the image plane is parallel to the vertical direction. 
+When they upload the image the model runs in the background and analyses the image and returns feedback to the user. The model can take unto 15 seconds to run.
+
+## How SquatSmart Works
+ 
 
 ## AWS
 
