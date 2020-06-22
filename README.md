@@ -12,6 +12,7 @@ Here is where SquatSmart comes in! With SquatSmart (http://analyticsanddata.me/)
 
 The user can upload the picture of them performing the squat either front facing or side facing. It can be taken from a phone camera. The camera should be in the centre with respect to the person and the camera angle should be aligned so that the image plane is parallel to the vertical direction. 
 When they upload the image the model runs in the background and analyses the image and returns feedback to the user. The model can take unto 15 seconds to run.
+![alt text](</squatsmart/uploads/webapp1.png>)
 
 ## How SquatSmart Works
  When the user uploads an image the model first extracts the pose information is extracted using the Openpose library. The pose keypoints are then used to determine the image orientation, ie front facing or side facing. If the image is deemed to be front facing then the model looks at the foot stance and determines if it is a wide, normal or narrow foot stance. If the image is side facing then the model evaluates the squat depth and determines whether the right squat depth is being achieved. 
