@@ -1,1 +1,0 @@
-from squatsmart import something

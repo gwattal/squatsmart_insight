@@ -78,7 +78,7 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             flash('File successfully uploaded') 
-            flash('Analysing keypoints ....')
+            flash('Analysing keypoints .... This can take upto 15 seconds')
             #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             x_test,filename_annotated=get_keypoints(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             
