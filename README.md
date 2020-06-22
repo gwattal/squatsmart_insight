@@ -6,7 +6,7 @@ People are getting more aware about fitness and are investing more time and mone
 
 To get the most out of a squat workout and to avoid injuries, the squat needs to be done with proper form. It can be hard to judge your own form while performing a demanding exercise like barbell squats, especially when one is a beginner. Many people take the help of a personal trainer or spotter to get feedback on their squat form, however this can be a little expensive. Moreover in the times of the Covid pandemic people might not have access to personal trainers or spotters.
 
-Here is where SquatSmart comes in! With SquatSmart a user can simply upload a picture of them performing the squat and get feedback on their squat form.
+Here is where SquatSmart comes in! With SquatSmart (http://analyticsanddata.me/) a user can simply upload a picture of them performing the squat and get feedback on their squat form.
 
 ## Using SquatSmart
 
@@ -14,7 +14,7 @@ The user can upload the picture of them performing the squat either front facing
 When they upload the image the model runs in the background and analyses the image and returns feedback to the user. The model can take unto 15 seconds to run.
 
 ## How SquatSmart Works
- When the user uploads an image the model first extracts the pose information is extracted using the Openpose library. The pose keypoints are then used to determine the image orientation, ie front facing or side facing. If the image is deemed to be front facing then the model looks at the foot stance and determines if it is a wide, normal or narrow foot stance.
+ When the user uploads an image the model first extracts the pose information is extracted using the Openpose library. The pose keypoints are then used to determine the image orientation, ie front facing or side facing. If the image is deemed to be front facing then the model looks at the foot stance and determines if it is a wide, normal or narrow foot stance. If the image is side facing then the model evaluates the squat depth and determines whether the right squat depth is being achieved. 
 
 
 ## AWS
